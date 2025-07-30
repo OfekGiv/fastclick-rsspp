@@ -15,7 +15,7 @@ Note that if you only want to reproduce experiments, NPF can build RSS++ for you
 
 One compiles RSS++ as FastClick, only with the 3 supplementary flags (at the end):
 ```
-./configure --enable-multithread --disable-linuxmodule --enable-intel-cpu --enable-user-multithread --verbose CFLAGS="-g -O3" CXXFLAGS="-g -std=gnu++11 -O3" --disable-dynamic-linking --enable-poll --enable-bound-port-transfer --enable-dpdk --enable-batch --with-netmap=no --enable-zerocopy --disable-dpdk-pool --disable-dpdk-packet --enable-flow --disable-task-stats --enable-cpu-load
+./configure --enable-multithread --disable-linuxmodule --enable-intel-cpu --enable-user-multithread --verbose CFLAGS="-g -O3" CXXFLAGS="-g -std=gnu++11 -O3" --disable-dynamic-linking --enable-poll --enable-bound-port-transfer --enable-dpdk --enable-batch --with-netmap=no --enable-zerocopy --disable-dpdk-pool --disable-dpdk-packet --enable-flow --disable-task-stats --enable-cpu-load --enable-flow-api
 ```
 If you're only interested in Kernel mode (balancing your existing socket application), just remove all the "dpdk" stuff in the line above (there are 3 options).
 
